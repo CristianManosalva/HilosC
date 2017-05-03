@@ -26,3 +26,8 @@ Actividades
 * Escriba un programa en C que haga lo siguiente
 	* Incluya el archivo de cabecera `pthread.h`
 	* El programa principal cree varios hilos y cada uno de ellos ejecuta un `hola n`, donde `n` es el identificador del hilo. **Hint:** use la funcion `pthread_self()`, detalles de la funcion [aqui](http://man7.org/linux/man-pages/man3/pthread_self.3.html)
+
+* Compile el programa `hello32.c` y ejecutelo varias veces (5 esta bien). 
+Observa algun patron en la salida de la ejecucion del programa
+
+
