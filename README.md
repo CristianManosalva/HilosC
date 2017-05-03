@@ -17,7 +17,7 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 	* Reduccion en el tiempo de ejecucion
 	* Uso del procesador
 
-* `thread_01*.c`
+* `thread_01*.c` En esta serie de programas se evidencian los cuidados que se deben tener a la hora de trabajar con hilos, en particular lo que tiene que ver con la destruccion de hilos. 
 
 Actividades
 -----------
