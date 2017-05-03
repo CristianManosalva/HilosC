@@ -17,6 +17,8 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 	* Reduccion en el tiempo de ejecucion
 	* Uso del procesador
 
+* **thread_01*.** 
+
 Actividades
 -----------
 
