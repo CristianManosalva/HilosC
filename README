@@ -1,0 +1,7 @@
+thread_01.orig.c: programa original, definicion de metodo para ejecutar como hilo y creacion de hilos
+thread_01.c: programa a completar por el estudiante y lograr que funcione
+thread_01a.c: como una sola modificacion puede alterar la operacion de un hilo
+thread_01b.c: metodo sleep() puede causar que un hilo nunca se ejecute
+thread_01c.c: metodo pthread_join() permite que un hilo espere por la 
+              terminacion de otro hilo de ejecucion
+thread_01d.c: ejercicio de observacion

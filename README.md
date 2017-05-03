@@ -8,15 +8,21 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 ```
 gcc fork.c -o fork
 ```
+
 	* Ejecute el recien creado `fork`
+
 ```
 time ./fork
 ```
+
 	* Compile `thread.c`
+
 ```
 gcc thread.c -o thread
 ```
+
 	* Ejecute el recien creado `thread`
+
 ```
 time ./thread
 ```
