@@ -17,7 +17,8 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 	* Reduccion en el tiempo de ejecucion
 	* Uso del procesador
 
-## Actividades
+Actividades
+-----------
 
 * Documente lo observado con los programas `fork` y `thread`.
 * Para el codigo **threadprime.c**, ejecute el binario de compilar este codigo y grafique los tiempos de respuesta al ejecutar su codigo con 1, 2, 4, 8, 16, 32, 64 y 128; hilos. 
