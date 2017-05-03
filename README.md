@@ -19,6 +19,8 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 
 * `thread_01*.c` En esta serie de programas se evidencian los cuidados que se deben tener a la hora de trabajar con hilos, en particular lo que tiene que ver con la destruccion de hilos. 
 
+* `riemann_scheme.c` Este programa da el esqueleto de lo que podria ser la implementacion del metodo de riemann para calcular el area bajo la curva usando hilos de ejecucion.
+
 Actividades
 -----------
 
@@ -32,4 +34,4 @@ Actividades
 * Compile el programa `hello32.c` y ejecutelo varias veces (5 esta bien). 
 ¿Observa algun patron en la salida de la ejecucion del programa?
 
-
+* Complete el codigo en `riemann_scheme.c`
