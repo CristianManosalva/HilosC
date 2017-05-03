@@ -3,7 +3,7 @@ Directorio con ejemplos son hilos en Sistemas Operativos
 
 En este repositorio encontraran algunos ejemplos respecto a la utilidad de los hilos en el contexto de los sistemas operativos.
 
-* **fork.c** y **thread.c** Este par archivos evidencian las ventajas a la hora de crear hilos de ejecucion versus el crear procesos con la llamada al sistema `fork()`
+* `fork.c` y `thread.c` Este par archivos evidencian las ventajas a la hora de crear hilos de ejecucion versus el crear procesos con la llamada al sistema `fork()`
 	* Compile `fork.c`, `gcc fork.c -o fork`
 
 	* Ejecute el recien creado `fork`, `time ./fork` 
@@ -13,11 +13,11 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 	* Ejecute el recien creado `thread`, `time ./thread`
 
 
-* **threadprime.c** Este codigo evidencia las ventajas de usar hilos
+* `threadprime.c` Este codigo evidencia las ventajas de usar hilos
 	* Reduccion en el tiempo de ejecucion
 	* Uso del procesador
 
-* **thread_01*.** 
+* `thread_01*.c`
 
 Actividades
 -----------
