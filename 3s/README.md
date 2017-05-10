@@ -31,7 +31,7 @@ Add the proper code sentences that allow you to determine how much time the prog
 - Vector initialization.
 - Counting the number of 3s in a given vector.
 
-**Hint:** Check this [link](http://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/)
+**Hint:** Check this [link](http://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/).
 
 ## 3s-01.c
 
@@ -46,6 +46,7 @@ Answer the following questions
 
 - How many elements the large vector has?
 - The program is correct? What is wrong with it? What value the program gets and what is the expected value?
+- Explain the results.
 
 ## 3s-02.c
 
@@ -55,6 +56,7 @@ This version of the program is more accurate but it is not completely correct.
 
 - Include the code sentences used to estimate how much time takes to each thread to count the number of 3s in a given array.
 - What is wrong with this code this time?
+- Using the techniques learned during our last session, describe a solution to solve the discrepancy between the obtained results.
 
 ## 3s-03.c
 
