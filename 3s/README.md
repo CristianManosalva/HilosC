@@ -31,6 +31,8 @@ Add the proper code sentences that allow you to determine how much time the prog
 - Vector initialization.
 - Counting the number of 3s in a given vector.
 
+**Hint:** Check this [link](http://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/)
+
 ## 3s-01.c
 
 This program uses threads in order to divide the task of counting 3s in a given vector amongst different "working units", a.k.a. *threads*. 
