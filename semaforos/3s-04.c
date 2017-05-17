@@ -4,9 +4,10 @@
 #include <time.h>
 
 #define MAX_THREADS 8
-#define VECTOR_SIZE 10000000
+#define VECTOR_SIZE 1000000000
 
 pthread_t tid[MAX_THREADS];
+pthread_mutex_t mutex;
 
 int *array;
 int length = VECTOR_SIZE;
@@ -19,12 +20,15 @@ void *count3s_thread(void *arg) {
 	int i;
 	int length_per_thread = length/max_threads;
 	// Cast -> http://stackoverflow.com/questions/1640423/error-cast-from-void-to-int-loses-precision
+	//int id = *((int*)(&arg));
 	int id = (int)arg;
 	int start = id * length_per_thread;
 	printf("\tThread [%d] starts [%d] length [%d]\n",id, start, length_per_thread);
 	for (i = start; i < start + length_per_thread; i++) {
 		if (array[i] == 3) {
+			pthread_mutex_lock(&mutex);
 			count++;
+			pthread_mutex_unlock(&mutex);
 		}
 	}
 	return NULL;
@@ -57,23 +61,24 @@ int main(int argc, char* argv[]) {
 	} else {
 		max_threads = MAX_THREADS;
 	}
-	printf("[3s-02] Using %d threads\n",max_threads);
+	printf("[3s-04] Using %d threads\n",max_threads);
 	// random seed
 	// http://stackoverflow.com/questions/822323/how-to-generate-a-random-number-in-c
-	printf("*** 3s-02 ***\n");
 	srand(time(NULL));
+	printf("*** 3s-04 ***\n");
 	printf("Initializing vector... ");
 	fflush(stdout);
 	initialize_vector();
 	printf("Vector initialized!\n");
 	fflush(stdout);
 	t1 = clock();
+	pthread_mutex_init(&mutex,NULL);
 	while (i < max_threads) {
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
 		if (err != 0) 
-			printf("[3s-02] Can't create a thread: [%d]\n", i);
+			printf("[3s-04] Can't create a thread: [%d]\n", i);
 		else
-			printf("[3s-02] Thread created!\n");
+			printf("[3s-04] Thread created!\n");
 		i++;
 	}
 	// https://computing.llnl.gov/tutorials/pthreads/#Joining
@@ -90,10 +95,12 @@ int main(int argc, char* argv[]) {
 		}
 	}
 	t2 = clock();
-	printf("[3s-02] Count by threads %d\n", count);
-	printf("[3s-02] Double check %d\n", double_count);
-	//printf("[[3s-02] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
-	printf("[[3s-02] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
+	printf("[3s-04] Count by threads %d\n", count);
+	printf("[3s-04] Double check %d\n", double_count);
+	pthread_mutex_destroy(&mutex);
+	//printf("[[3s-04] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
+	printf("[[3s-04] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
+	pthread_exit(NULL);
 	return 0;
 }
 

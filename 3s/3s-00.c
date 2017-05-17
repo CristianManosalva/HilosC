@@ -4,7 +4,7 @@
 #include <time.h>
 
 #define MAX_THREADS 4
-#define VECTOR_SIZE 1000000000
+#define VECTOR_SIZE 1000000
 
 pthread_t tid[MAX_THREADS];
 
@@ -63,6 +63,7 @@ int main(int argc, char* argv[]) {
 	//printf("[[3s-00] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-00] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	printf("Finishing 3s-00");
+	free(array);
 	return 0;
 }
 
