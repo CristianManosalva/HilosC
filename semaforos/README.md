@@ -40,9 +40,11 @@ gcc -pthread sembook-proble-3.1.c -o sem-3.1
 
 Ejecute el programa (`./sem-3.1`) y observe que si no se coordinan de forma correcta, el hilo B puede no imprimir ninguna cadena. Este programa debería imprimir algo similar a esto:
 
+```
 	On thread 'b'
 	On thread 'a'
 	[b] hola
+```
 
 	+ ¿Cómo usaría usted `sem_signal` y `sem_post` para garantizar que el proceso B siempre encontrara la cadena `hola` para imprimir?
 	+ Modifique este programa de modo que en lugar de crear semáforos, se creen procesos como en el código `sharedsem.c`.
