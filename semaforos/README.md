@@ -47,6 +47,7 @@ Ejecute el programa (`./sem-3.1`) y observe que si no se coordinan de forma corr
 ```
 
 Responda las siguientes preguntas:
+
 	* ¿Cómo usaría usted `sem_signal` y `sem_post` para garantizar que el proceso B siempre encontrara la cadena `hola` para imprimir?
 	* Modifique este programa de modo que en lugar de crear semáforos, se creen procesos como en el código `sharedsem.c`.
 
