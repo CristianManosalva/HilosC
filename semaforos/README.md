@@ -48,8 +48,8 @@ Ejecute el programa (`./sem-3.1`) y observe que si no se coordinan de forma corr
 
 Responda las siguientes preguntas:
 
-	* ¿Cómo usaría usted `sem_signal` y `sem_post` para garantizar que el proceso B siempre encontrara la cadena `hola` para imprimir?
-	* Modifique este programa de modo que en lugar de crear semáforos, se creen procesos como en el código `sharedsem.c`.
+  * ¿Cómo usaría usted `sem_signal` y `sem_post` para garantizar que el proceso B siempre encontrara la cadena `hola` para imprimir?
+  * Modifique este programa de modo que en lugar de crear semáforos, se creen procesos como en el código `sharedsem.c`.
 
 * `sembook-proble-3.3.c`. Suponga que tenemos dos hilos (A y B) que tienen líneas de código `a1`, `a2`, `b1` y `b2`. Los hilos se deben ejecutar de forma que a la hora de correr el programa `a1` ocurra antes de `b2` y `b1` antes de `a2`. Modifique el programa de modo que estas condiciones se cumplan.
 
