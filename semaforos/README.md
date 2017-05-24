@@ -2,12 +2,23 @@
 
 ## Notas preliminares
 
-Para los siguientes programas  usted debe estar familiarizado con unas instrucciones que sirven para gestionar semáforos.
+Para los siguientes programas  usted debe estar familiarizado con algunos datos que sirven para gestionar semáforos.
+
+* Siempre incluya el archivo de cabecera `semaphore.h`.
+* Antes de usar un semáforo debe crearlo. La función para creas los semáforos es `sem_open(char*, int oflag,...)`, donde `char*` es el nombre que usted desee ponerle al semáforo y `o_flag` indica como inicializar el archivo. Aquí un ejemplo
+
+```
+#define SEMNAME "/mysemaphore"
+...
+ s = sem_open(SEMNAME, O_CREAT, S_IRUSR | S_IWUSR, 0);
+```
+
+En Internet usted podrá encontrar lo que significan las constantes `O_CREAT`, `S_IRUSR` y `S_IWUSR`.
 
 * `sembook-proble-3.1.c` suponga que existen dos hilos (A y B) y lo que se quiere es garantizar siempre la ejecución de una instruccion en A y luego una instruccion en B. Compile el programa de la siguiente manera
 
 ```
-	gcc -pthread sembook-proble-3.1.c -o sem-3.1
+gcc -pthread sembook-proble-3.1.c -o sem-3.1
 ```
 
 Ejecute el programa (`./sem-3.1`) y observe que si no se coordinan de forma correcta, el hilo B puede no imprimir ninguna cadena. Este programa debería imprimir algo similar a esto:
