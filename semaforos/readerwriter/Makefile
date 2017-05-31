@@ -8,4 +8,4 @@ lib:
 	ar rc libreaderwriter.a readerwriter_util.o
 
 bin:
-	gcc readerwriter.c -o readerwriter -L/home/vagrant/semaforos/readerwriter -pthread -lreaderwriter -lm
+	gcc readerwriter.c -o readerwriter -L$(shell pwd) -pthread -lreaderwriter -lm
