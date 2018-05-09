@@ -24,7 +24,9 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 Actividades
 -----------
 
-* Documente lo observado con los programas `fork` y `thread`.
+* Documente lo observado con los programas `fork` y `thread`. 
+  * Asegúrese que tanto `fork.c` como `thread.c` tengan en las variables `NFORKS` y `NTHREADS` el valor de `50000`, respectivamente.
+  * Tome los tiempos de ejecutar ambos programas. Ejecúte cada programa 5 veces. De cada programa elimine el valor más alto y el más bajo; saque el promedio de los tres valores restantes.
 * Para el codigo **threadprime.c**, ejecute el binario de compilar este codigo y grafique los tiempos de respuesta al ejecutar su codigo con 1, 2, 4, 8, 16, 32, 64 y 128; hilos. 
 **Hint:** Haga los ajustes en el codigo para que uste pueda correr el programa con 64 y 128 hilos.
 * Escriba un programa en C que haga lo siguiente
