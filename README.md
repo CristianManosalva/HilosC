@@ -21,8 +21,8 @@ En este repositorio encontraran algunos ejemplos respecto a la utilidad de los h
 
 * `riemann_scheme.c` Este programa da el esqueleto de lo que podria ser la implementacion del metodo de Riemann para calcular el area bajo la curva usando hilos de ejecucion.
 
-Actividades
------------
+Actividades a llevar a cabo
+---------------------------
 
 * Documente lo observado con los programas `fork` y `thread`. 
   * Asegúrese que tanto `fork.c` como `thread.c` tengan en las variables `NFORKS` y `NTHREADS` el valor de `50000`, respectivamente.
